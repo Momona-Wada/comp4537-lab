@@ -1,0 +1,21 @@
+{
+  "name": "comp4537-lab",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Momona-Wada/comp4537-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Momona-Wada/comp4537-lab/issues"
+  },
+  "homepage": "https://github.com/Momona-Wada/comp4537-lab#readme",
+  "description": ""
+}
