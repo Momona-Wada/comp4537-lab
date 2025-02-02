@@ -75,7 +75,7 @@ const server = http.createServer((req, res) => {
 });
 
 // ポート番号は環境変数 PORT があれば使用し、無ければ 7000 番ポートを利用
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
