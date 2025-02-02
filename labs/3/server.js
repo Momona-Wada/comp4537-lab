@@ -1,3 +1,5 @@
+// This code was partially reviewed by chatGPT
+
 const url = require("url");
 const ReadFile = require("./readFile");
 const WriteFile = require("./writeFile");
