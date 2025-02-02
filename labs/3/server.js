@@ -17,7 +17,9 @@ function handleLab3Request(pathname, query, method, sendResponse) {
 
             try {
                 WriteFile.appendToFile("file.txt", textToAppend + "\n");
-                sendResponse(200, messages.TEXT_APPEND_SUCCESSFULLY);
+
+                const successMessage = messages.TEXT_APPEND_SUCCESSFULLY.replace("%textToAppend%", textToAppend)
+                sendResponse(200, successMessage);
             } catch (err) {
                 console.error(err);
                 sendResponse(500, messages.SERVER_ERROR_WRITE_FILE);
@@ -37,7 +39,8 @@ function handleLab3Request(pathname, query, method, sendResponse) {
                 sendResponse(200, content);
             } catch (err) {
                 if (err.code === "ENOENT") {
-                    sendResponse(404, messages.FILE_NOT_FOUND);
+                    const fileNotFoundMessage = messages.FILE_NOT_FOUND.replace("%filename%", filename)
+                    sendResponse(404, fileNotFoundMessage);
                 } else {
                     console.error(err);
                     sendResponse(500, messages.SERVER_ERROR_READ_FILE);
